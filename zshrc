@@ -1,5 +1,31 @@
 ZSH=$HOME/.oh-my-zsh
 
+#export LDFLAGS="-L/usr/local/opt/readline/lib"
+#export CPPFLAGS="-I/usr/local/opt/readline/include"
+#export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
+
+
+# Setup Compiler paths for readline and openssl
+#local READLINE_PATH=$(brew --prefix readline)
+#local OPENSSL_PATH=$(brew --prefix openssl)
+#export LDFLAGS="-L$READLINE_PATH/lib -L$OPENSSL_PATH/lib"
+#export CPPFLAGS="-I$READLINE_PATH/include -I$OPENSSL_PATH/include"
+#export PKG_CONFIG_PATH="$READLINE_PATH/lib/pkgconfig:$OPENSSL_PATH/lib/pkgconfig"
+
+# Use the OpenSSL from Homebrew instead of ruby-build
+# Note: the Homebrew version gets updated, the ruby-build version doesn't
+#export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$OPENSSL_PATH"
+
+# Place openssl@1.1 at the beginning of your PATH (preempt system libs)
+#export PATH=$OPENSSL_PATH/bin:$PATH
+
+#export LDFLAGS="-L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib"
+#export CPPFLAGS="-I/usr/local/opt/readline/include -I/usr/local/opt/openssl@1.1/include"
+
+#For pkg-config to find openssl@1.1 you may need to set:
+#export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig:/usr/local/opt/openssl@1.1/lib/pkgconfig"
+
+
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
 ZSH_THEME="robbyrussell"
 
@@ -58,5 +84,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
